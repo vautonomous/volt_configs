@@ -29,15 +29,7 @@ network:
           addresses: [8.8.8.8,8.8.4.4]    
       gateway4: 192.168.1.1
   version: 2
-  wifis: 
-    wlxd03745530704:
-      optional: true
-      access-points:
-        "LEO_Repeater_2.4G":
-          password: "hoverboards"
-      dhcp4: yes
-      dhcp6: yes   
-          
+  
   
       
     
