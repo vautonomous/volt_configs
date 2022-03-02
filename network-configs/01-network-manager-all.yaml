@@ -1,0 +1,43 @@
+# Let NetworkManager manage all devices on this system
+network:
+  ethernets:
+    enp10s0:
+      addresses:
+        - 169.207.0.1/16
+      mtu: 9000
+    enp11s0:
+      addresses:
+        - 169.209.0.1/16 
+      mtu: 9000
+    enp12s0:
+      addresses:
+        - 169.219.0.1/16
+      mtu: 9000
+    enp13s0:
+      addresses:
+        - 169.254.0.1/16 
+      mtu: 9000
+    enp7s0:
+      dhcp4: true  
+      dhcp6: true  
+    enp0s31f6:
+      #dhcp4: true
+      #dhcp6: true
+      addresses:
+      - 192.168.1.110/24
+      nameservers:
+          addresses: [8.8.8.8,8.8.4.4]    
+      gateway4: 192.168.1.1
+  version: 2
+  wifis: 
+    wlxd03745530704:
+      optional: true
+      access-points:
+        "LEO_Repeater_2.4G":
+          password: "hoverboards"
+      dhcp4: yes
+      dhcp6: yes   
+          
+  
+      
+    
