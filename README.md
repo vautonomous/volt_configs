@@ -112,4 +112,4 @@ lxappearance
 - Icon Theme --> Numix
 - Click Apply and logout & login
 
-- For the shortcuts you need to know to use i3, check out: `~/.config/i3/config`
+- For the shortcuts you need to know to use i3, check out: `volt_configs/i3-config/i3-shortcuts`
