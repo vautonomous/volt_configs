@@ -38,6 +38,7 @@ qdirstat \
 screenfetch \
 lm-sensors \
 net-tools \
+mate-terminal \
 
 sudo -u $USER_NAME mkdir /home/$USER_NAME/programs
 sudo -u $USER_NAME mkdir /home/$USER_NAME/projects
