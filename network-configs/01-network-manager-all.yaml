@@ -28,8 +28,8 @@ network:
       nameservers:
           addresses: [8.8.8.8,8.8.4.4]    
       gateway4: 192.168.1.1
+    enp7s0:
+      dhcp4: true
+      dhcp6: true    
   version: 2
   
-  
-      
-    
