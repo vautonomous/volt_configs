@@ -262,7 +262,10 @@ bindsym $mod+Shift+n move workspace to output left
 bindsym $mod+Shift+m move workspace to output right
 
 # Monitors set from arandr
-#exec ~/.screenlayout/default.sh
+exec_always ~/.screenlayout/default.sh
+
+# Turn off screen sleeping
+exec_always xset s off
 
 # Dunst
 bindsym $mod+z exec dunstctl context
