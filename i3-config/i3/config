@@ -265,7 +265,7 @@ bindsym $mod+Shift+m move workspace to output right
 exec_always ~/.screenlayout/default.sh
 
 # Turn off screen sleeping
-exec_always xset s off
+exec_always xset -dpms s off
 
 # Dunst
 bindsym $mod+z exec dunstctl context
