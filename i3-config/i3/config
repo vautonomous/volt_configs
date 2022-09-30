@@ -220,9 +220,6 @@ bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 bindsym $mod+x exec thunar
 bindsym $mod+n exec gedit
 
-# Floatings
-for_window [class="TeamViewer"] floating disable
-
 # Themes
 exec --no-startup-id xfsettingsd --replace
 
@@ -262,10 +259,13 @@ bindsym $mod+Shift+n move workspace to output left
 bindsym $mod+Shift+m move workspace to output right
 
 # Monitors set from arandr
-exec_always ~/.screenlayout/default.sh
+exec ~/.screenlayout/default.sh
 
 # Turn off screen sleeping
 exec_always xset -dpms s off
+
+# Set GPU performance mode to maximum
+exec ~/projects/volt_scripts/helper/set_max_gpu_perf.sh
 
 # Dunst
 bindsym $mod+z exec dunstctl context
@@ -280,4 +280,5 @@ exec_always --no-startup-id nm-applet
 
 # xkill
 bindsym --release $mod+Shift+x exec xkill
+
 
