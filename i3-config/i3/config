@@ -281,4 +281,7 @@ exec_always --no-startup-id nm-applet
 # xkill
 bindsym --release $mod+Shift+x exec xkill
 
-
+assign [class="navbar_i3" instance="navbar_i3"] 1
+assign [class="Mission_Control" instance="mission_control"] 1
+assign [class="Mission_Observation" instance="mission_observation"] 1
+assign [class="rviz2" instance="rviz_volt"] 1
