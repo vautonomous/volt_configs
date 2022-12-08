@@ -79,7 +79,6 @@
   - Notify me of a new Ubuntu version: Never
 - Close, Reload
 - Connect to Internet
-  - Wifi pass is: hoverboards
 - Open up a terminal with Ctrl+Alt+T
 
 
@@ -93,9 +92,9 @@ sudo apt dist-upgrade -y
 
 ```bash
 sudo apt install -y git
-git clone https://gitlab.com/leo-drive/general/knowledge-base.git
-chmod +x ~/knowledge-base/pages/system-setup/install_things.sh
-sudo ~/knowledge-base/pages/system-setup/install_things.sh
+git clone https://github.com/vautonomous/volt_configs.git
+chmod +x ~/volt_configs/system-setup/install_things.sh
+sudo ~/volt_configs/system-setup/install_things.sh <user_name>
 ```
 - Log out of computer (Don't power off, we need the login screen!)
 - Click on the small gear button (If gear doesn't appear restart your pc)
