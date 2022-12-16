@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <CycloneDDS xmlns="https://cdds.io/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://cdds.io/config https://raw.githubusercontent.com/eclipse-cyclonedds/cyclonedds/master/etc/cyclonedds.xsd">
-    <Domain Id="any">
+    <Domain id="any">
         <General>
-            <Interfaces>
-                <NetworkInterface autodetermine="true" priority="default" multicast="default" />
-            </Interfaces>
+            <NetworkInterfaceAddress>auto</NetworkInterfaceAddress>
             <AllowMulticast>spdp</AllowMulticast>
             <MaxMessageSize>65500B</MaxMessageSize>
+            <FragmentSize>4000B</FragmentSize>
         </General>
-        <Discovery>
-            <EnableTopicDiscoveryEndpoints>true</EnableTopicDiscoveryEndpoints>
-        </Discovery>
         <Internal>
             <Watermarks>
                 <WhcHigh>500kB</WhcHigh>
             </Watermarks>
         </Internal>
-        <Tracing>
-            <Verbosity>config</Verbosity>
-            <OutputFile>cdds.log.${CYCLONEDDS_PID}</OutputFile>
-        </Tracing>
     </Domain>
 </CycloneDDS>
