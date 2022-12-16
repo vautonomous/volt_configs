@@ -73,6 +73,12 @@ sudo -u $USER_NAME wget https://dl.google.com/linux/direct/google-chrome-stable_
 gdebi -n google-chrome-stable_current_amd64.deb
 sudo -u $USER_NAME rm google-chrome-stable_current_amd64.deb
 
+# Gitkraken
+sudo -u $USER_NAME wget https://release.axocdn.com/linux/gitkraken-amd64.deb
+gdebi -n gitkraken-amd64.deb
+sudo -u $USER_NAME rm gitkraken-amd64.deb
+
+
 # CLion
 
 cd /home/$USER_NAME/programs
