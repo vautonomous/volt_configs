@@ -17,3 +17,5 @@ create_symlink_if_not_exists() {
 }
 
 create_symlink_if_not_exists "/home/volt/volt_configs/i3-config/i3/config" "/home/volt/.config/i3/config"
+
+create_symlink_if_not_exists "/home/volt/volt_configs/dds-config/cyclone_dds_config.xml" "/home/volt/cyclone_dds_config.xml"
