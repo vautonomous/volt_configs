@@ -93,7 +93,6 @@ sudo -u $USER_NAME rm -rf /home/$USER_NAME/programs/dunst
 
 cd /home/$USER_NAME/programs
 sudo -u $USER_NAME git clone https://github.com/vivien/i3blocks-contrib.git
-sudo -u $USER_NAME cp /home/$USER_NAME/volt_configs/i3-config/.i3blocks.conf /home/$USER_NAME/
 cd /home/$USER_NAME/programs/i3blocks-contrib
 sudo -u $USER_NAME make
 cd /home/$USER_NAME/
