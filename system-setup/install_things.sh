@@ -2,12 +2,20 @@
 
 USER_NAME=$1
 
+# Use https://regolith-desktop.com/ for i3-gaps
+
+wget -qO - https://regolith-desktop.org/regolith.key | \
+gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
+
+echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+https://regolith-desktop.org/release-ubuntu-jammy-amd64 jammy main" | \
+sudo tee /etc/apt/sources.list.d/regolith.list
+
 apt update
 apt dist-upgrade -y
 
-add-apt-repository -y ppa:kgilmer/speed-ricer
-
-apt install -y \
+apt install -y fzf \
+ccache \
 suckless-tools \
 j4-dmenu-desktop \
 i3-gaps \
@@ -37,12 +45,23 @@ libgtk-3-dev \
 qdirstat \
 screenfetch \
 lm-sensors \
+thunar-archive-plugin \
+gnome-screenshot \
+autoconf \
+snapd \
+gnome-flashback \
+ilia \
+xfce4-settings
 net-tools \
 mate-terminal \
 nethogs \
 
 sudo -u $USER_NAME mkdir /home/$USER_NAME/programs
 sudo -u $USER_NAME mkdir /home/$USER_NAME/projects
+
+# Trashy
+
+
 
 # Dunst
 
