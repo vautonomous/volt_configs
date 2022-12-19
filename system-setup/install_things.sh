@@ -56,12 +56,26 @@ net-tools \
 mate-terminal \
 nethogs \
 
+
+# Set default directories
+
+gsettings set org.gnome.gnome-screenshot auto-save-directory "~/Pictures/screenshots"
+
 sudo -u $USER_NAME mkdir /home/$USER_NAME/programs
 sudo -u $USER_NAME mkdir /home/$USER_NAME/projects
 
 # Trashy
 
-
+cd /home/$USER_NAME/programs
+sudo -u $USER_NAME git clone https://gitlab.com/trashy/trashy.git
+cd trashy
+autoreconf --install
+automake
+./configure
+sudo -u $USER_NAME make
+make install
+cd /home/$USER_NAME/
+sudo -u $USER_NAME rm -rf /home/$USER_NAME/programs/trashy
 
 # Dunst
 
@@ -84,6 +98,11 @@ cd /home/$USER_NAME/programs/i3blocks-contrib
 sudo -u $USER_NAME make
 cd /home/$USER_NAME/
 
+# Remove i386 architecture and install drivers
+sudo dpkg --remove-architecture i386
+
+sudo ubuntu-drivers autoinstall
+
 # i3 config
 sudo -u $USER_NAME cp -r /home/$USER_NAME/volt_configs/i3-config/i3 /home/$USER_NAME/.config
 
@@ -92,21 +111,34 @@ sudo -u $USER_NAME wget https://dl.google.com/linux/direct/google-chrome-stable_
 gdebi -n google-chrome-stable_current_amd64.deb
 sudo -u $USER_NAME rm google-chrome-stable_current_amd64.deb
 
-# Gitkraken
-sudo -u $USER_NAME wget https://release.axocdn.com/linux/gitkraken-amd64.deb
-gdebi -n gitkraken-amd64.deb
-sudo -u $USER_NAME rm gitkraken-amd64.deb
+# Others
 
+sudo snap install core
 
-# CLion
+sudo snap install gitkraken --classic
+sudo snap install discord
+sudo snap install code --classic
 
-cd /home/$USER_NAME/programs
-sudo -u $USER_NAME wget https://download.jetbrains.com/cpp/CLion-2022.1.2.tar.gz
-sudo -u $USER_NAME tar -xf CLion-2022.1.2.tar.gz
-sudo -u $USER_NAME mv clion-2022.1.2 clion
-sudo -u $USER_NAME chmod +x clion/bin/clion.sh
-sudo -u $USER_NAME rm CLion-2022.1.2.tar.gz
-cd /home/$USER_NAME/
+sudo snap install clion --classic
+sudo snap install webstorm --classic
+sudo snap install pycharm-community --classic
+
+# OBS Studio
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt install ffmpeg obs-studio
+
+# FSearch
+sudo add-apt-repository -y ppa:christian-boxdoerfer/fsearch-daily
+sudo apt install -y fsearch
+
+# configure ccache
+
+echo "max_size = 100G" > /home/$USER_NAME/.ccache/ccache.conf
+
+# Create symbolic links
+
+chmod +x ./home/$USER_NAME/volt_configs/install_links.sh
+./home/$USER_NAME/volt_configs/install_links.sh
 
 apt autoremove
 
