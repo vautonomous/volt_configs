@@ -18,6 +18,7 @@ apt install -y fzf \
 ccache \
 suckless-tools \
 j4-dmenu-desktop \
+rofi \
 i3-gaps \
 i3blocks \
 xdotool \
