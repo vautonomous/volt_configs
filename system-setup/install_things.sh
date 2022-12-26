@@ -52,7 +52,7 @@ autoconf \
 snapd \
 gnome-flashback \
 ilia \
-xfce4-settings
+xfce4-settings \
 net-tools \
 mate-terminal \
 nethogs \
@@ -121,8 +121,6 @@ sudo snap install discord
 sudo snap install code --classic
 
 sudo snap install clion --classic
-sudo snap install webstorm --classic
-sudo snap install pycharm-community --classic
 
 # OBS Studio
 sudo add-apt-repository ppa:obsproject/obs-studio
@@ -134,6 +132,7 @@ sudo apt install -y fsearch
 
 # configure ccache
 
+ccache -c
 echo "max_size = 100G" > /home/$USER_NAME/.ccache/ccache.conf
 
 # Create symbolic links
