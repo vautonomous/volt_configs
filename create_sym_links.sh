@@ -22,6 +22,6 @@ create_symlink_if_not_exists "$SCRIPT_DIR/i3-config/.i3blocks.conf" "/home/volt/
 
 create_symlink_if_not_exists "$SCRIPT_DIR/dds-config/cyclone_dds_config.xml" "/home/volt/cyclone_dds_config.xml"
 
-create_symlink_if_not_exists "$SCRIPT_DIR/dunst-config/dunst" "/home/volt/.config/dunst"
+create_symlink_if_not_exists "$SCRIPT_DIR/dunst-config/dunst" "/home/volt/.config/dunst/dunstrc"
 
-create_symlink_if_not_exists "$SCRIPT_DIR/rofi-config/rofi" "/home/volt/.config/rofi"
+create_symlink_if_not_exists "$SCRIPT_DIR/rofi-config/rofi" "/home/volt/.config/rofi/config"
