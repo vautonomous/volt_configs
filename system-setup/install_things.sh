@@ -56,6 +56,7 @@ xfce4-settings
 net-tools \
 mate-terminal \
 nethogs \
+smartmontools \
 
 
 # Set default directories
