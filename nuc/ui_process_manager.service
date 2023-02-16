@@ -1,0 +1,16 @@
+# sudo nano /etc/systemd/system/ui_process_manager.service
+[Unit]
+Description=UI Process Manager
+After=network-online.target
+
+[Service]
+Type=simple
+User=nuc
+Group=nuc
+WorkingDirectory=/home/nuc
+
+ExecStart=bash -i -c /home/nuc/projects/volt_scripts/launch_scripts/run_ui_process_manager_nuc.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
