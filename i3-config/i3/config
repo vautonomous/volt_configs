@@ -304,4 +304,6 @@ font pango:DejaVu Sans Mono 0
 # Start autoware and related
 exec /home/volt/projects/volt_scripts/startup_on_boot.sh
 
+exec_always "pkill unclutter ; unclutter -idle 0.01 -root &"
+
 
