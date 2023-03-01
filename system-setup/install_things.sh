@@ -146,3 +146,6 @@ apt autoremove
 # .bashrc things
 sudo -u $USER_NAME sed -i 's/#force_color_prompt=yes/force_color_prompt=yes/g' .bashrc
 
+# flatpak config
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
