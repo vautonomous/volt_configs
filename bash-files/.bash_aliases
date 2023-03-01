@@ -13,6 +13,7 @@ alias colbu_upto_d="colbu_r --packages-up-to "
 alias soii="source install/setup.bash"
 
 alias auto_sor="source ~/projects/autoware/install/setup.bash"
+alias autt="cd ~/projects/autoware/ && source ~/projects/autoware/install/setup.bash"
 
 alias run_autoware="auto_sor && ros2 launch autoware_launch isuzu.launch.xml map_path:=/home/volt/projects/gebze_map vehicle_model:=isuzu_vehicle sensor_model:=isuzu_sensor"
 
@@ -26,12 +27,11 @@ alias bag_plan="~/projects/volt_scripts/test/bag/planning/planning.sh"
 alias bag_all="~/projects/volt_scripts/test/bag/all-topics.sh"
  
 alias sorog="source /opt/ros/galactic/setup.bash"
-
-alias clion="/home/volt/programs/clion/bin/clion.sh"
+alias soroh="source /opt/ros/humble/setup.bash"
 
 alias run_motion="~/projects/volt_scripts/test/planning/run_motion_planning.sh"
 
-alias run_all="sorog && ~/projects/volt_scripts/test/run_all.sh"
+alias run_all="soroh && ~/projects/volt_scripts/test/run_all.sh"
 
 alias rm="trashy"
 
@@ -62,4 +62,8 @@ ros2 bag record -o ros2bag_planning_outputs-${1} \
 /planning/scenario_planning/lane_driving/trajectory \
 /planning/scenario_planning/lane_driving/behavior_planning/path_with_lane_id \
 /planning/scenario_planning/lane_driving/behavior_planning/path
+}
+
+auto_pub_goal(){
+ros2 topic pub --once /planning/mission_planning/goal geometry_msgs/PoseStamped "{header: {stamp: now, frame_id: 'map'}, pose: {position: {x: $1, y: $2, z: $3}, orientation: {x: $4, y: $5, z: $6, w: $7}}}"
 }
