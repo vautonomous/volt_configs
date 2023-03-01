@@ -30,6 +30,9 @@ export CXX="/usr/lib/ccache/g++"
 # fzf
 source /usr/share/doc/fzf/examples/key-bindings.bash
 
+# flatpak
+export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:/home/your_user_name/.local/share/flatpak/exports/share
+
 
 
 
