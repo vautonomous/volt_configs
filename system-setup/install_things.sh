@@ -134,7 +134,7 @@ sudo apt install -y fsearch
 # configure ccache
 
 ccache -c
-echo "max_size = 100G" > /home/$USER_NAME/.ccache/ccache.conf
+echo "max_size = 100G" > /home/$USER_NAME/.cache/ccache/ccache.conf
 
 # Create symbolic links
 
