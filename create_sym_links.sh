@@ -16,12 +16,12 @@ create_symlink_if_not_exists() {
     echo ""
 }
 
-create_symlink_if_not_exists "$SCRIPT_DIR/i3-config/i3/config" "/home/volt/.config/i3/config"
+create_symlink_if_not_exists "$SCRIPT_DIR/i3-config/i3" "/home/volt/.config/i3"
 
 create_symlink_if_not_exists "$SCRIPT_DIR/i3-config/.i3blocks.conf" "/home/volt/.i3blocks.conf"
 
 create_symlink_if_not_exists "$SCRIPT_DIR/dds-config/cyclone_dds_config.xml" "/home/volt/cyclone_dds_config.xml"
 
-create_symlink_if_not_exists "$SCRIPT_DIR/dunst-config/dunst" "/home/volt/.config/dunst/dunstrc"
+create_symlink_if_not_exists "$SCRIPT_DIR/dunst-config" "/home/volt/.config/dunst"
 
-create_symlink_if_not_exists "$SCRIPT_DIR/rofi-config/rofi" "/home/volt/.config/rofi/config"
+create_symlink_if_not_exists "$SCRIPT_DIR/rofi-config" "/home/volt/.config/rofi"
