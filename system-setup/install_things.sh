@@ -57,6 +57,7 @@ net-tools \
 mate-terminal \
 nethogs \
 smartmontools \
+flatpak \
 
 
 # Set default directories
