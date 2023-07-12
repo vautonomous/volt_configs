@@ -16,6 +16,8 @@ create_symlink_if_not_exists() {
     echo ""
 }
 
+create_symlink_if_not_exists "$SCRIPT_DIR/bash-files/.bash_aliases" "/home/volt/.bash_aliases"
+
 create_symlink_if_not_exists "$SCRIPT_DIR/i3-config/i3" "/home/volt/.config/i3"
 
 create_symlink_if_not_exists "$SCRIPT_DIR/i3-config/.i3blocks.conf" "/home/volt/.i3blocks.conf"
