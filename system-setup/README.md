@@ -2,10 +2,10 @@
 
 ## Preparing the Ubuntu Install USB
 
-- Download latest version of Ubuntu 20.04 ISO from
-    - https://releases.ubuntu.com/20.04/
+- Download latest version of Ubuntu 22.04 ISO from
+    - https://releases.ubuntu.com/22.04/
         - Right now the latest version
-          is https://releases.ubuntu.com/20.04/ubuntu-20.04.3-desktop-amd64.iso
+          is [https://releases.ubuntu.com/20.04/ubuntu-20.04.3-desktop-amd64.iso](https://releases.ubuntu.com/jammy/ubuntu-22.04-latest-desktop-amd64.iso)
         - Check the latest version and download that.
         - Make sure it ends with `desktop-amd64`
 
@@ -100,12 +100,17 @@ sudo ~/volt_configs/system-setup/install_things.sh <user_name>
 - Click on the small gear button (If gear doesn't appear restart your pc)
 - Select i3 and login.
 
+## Default Directories
+
+``` bash
+gsettings set org.gnome.gnome-screenshot auto-save-directory "~/Pictures/screenshots"
+```
 
 ## Logins & Appearance
 
 - Open a terminal and type:
 ```bash
-lxappearance
+xfce4-settings-manager
 ```
 - Widget --> Numix
 - Icon Theme --> Numix
