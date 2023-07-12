@@ -139,7 +139,8 @@ echo -e "# Set maximum cache size\nmax_size = 100G" > /home/$USER_NAME/.cache/cc
 ccache -c ccache.conf
 
 # Create symbolic links
-
+# Remove i3 config folder, in the following steps we will create a linked folder for that
+rm -rf /home/$USER_NAME/.config/i3
 chmod +x /home/$USER_NAME/volt_configs/create_sym_links.sh
 /home/$USER_NAME/volt_configs/create_sym_links.sh
 
