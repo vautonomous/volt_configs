@@ -152,7 +152,6 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 
 #fzf
 source /usr/share/doc/fzf/examples/key-bindings.bash
-source /home/volt/programs/plotjuggler_ws/install/setup.sh
 
 # flatpak
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:/home/volt/.local/share/flatpak/exports/share
