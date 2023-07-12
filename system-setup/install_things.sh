@@ -140,8 +140,8 @@ ccache -c ccache.conf
 
 # Create symbolic links
 
-chmod +x ./home/$USER_NAME/volt_configs/create_sym_links.sh
-./home/$USER_NAME/volt_configs/create_sym_links.sh
+chmod +x /home/$USER_NAME/volt_configs/create_sym_links.sh
+/home/$USER_NAME/volt_configs/create_sym_links.sh
 
 apt autoremove
 
