@@ -139,8 +139,8 @@ echo "max_size = 100G" > /home/$USER_NAME/.cache/ccache/ccache.conf
 
 # Create symbolic links
 
-chmod +x ./home/$USER_NAME/volt_configs/install_links.sh
-./home/$USER_NAME/volt_configs/install_links.sh
+chmod +x ./home/$USER_NAME/volt_configs/create_sym_links.sh
+./home/$USER_NAME/volt_configs/create_sym_links.sh
 
 apt autoremove
 
